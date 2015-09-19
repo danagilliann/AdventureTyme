@@ -1,25 +1,24 @@
 var express = require('express');
-var mysql = require('mysql');
 var app = express();
-var con = mysql.createConnection({ 
-	// change host name to adventureTyme.co later
-	host: 'localhost',
-	user: 'Admin',
-	password: 'secret',
+
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('mydb.db');
+var check;
+db.serialize(function() {
+
+  db.run("CREATE TABLE if not exists user_info (info TEXT)");
+  var stmt = db.prepare("INSERT INTO user_info VALUES (?)");
+  for (var i = 0; i < 10; i++) {
+      stmt.run("Ipsum " + i);
+  }
+  stmt.finalize();
+
+  db.each("SELECT rowid AS id, info FROM user_info", function(err, row) {
+      console.log(row.id + ": " + row.info);
+  });
 });
 
-con.connect(function(err) { 
-	if (err) { 
-		console.log('Error connect to DB');
-	}
-	console.log('Connection established');
-});
-
-con.end(function(err) { 
-	// The connection is terminated gracefully
-  // Ensures all previously enqueued queries are still
-  // before sending a COM_QUIT packet to the MySQL server.
-});
+db.close();
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
