@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('mydb.db');
+var db = new sqlite3.Database('app.db');
 var check;
 
 db.serialize(function() { 
