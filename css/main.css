@@ -26,7 +26,8 @@ html {
 }
 .center h4{
 	color:white;
-	font-family: 'Fjalla One', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 }
 .center form{
 	padding-top: 30px;
