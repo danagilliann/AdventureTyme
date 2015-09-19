@@ -1,0 +1,39 @@
+html{
+	background: #CAFBF3;
+}
+.nav {
+	overflow: visible;
+
+}
+.bar {
+  height: 50;
+}
+.nav a {
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 10px 10px 5px;
+  text-transform: uppercase;
+  height: 50px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.nav .container{
+  padding-top:10px;
+}
+.nav li {
+  height: 40px;
+  display: inline;
+}
+.content {
+	text-align: center;
+	bottom: 0;
+  height: 300px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.x {
+  padding-top: 10px;
+}
