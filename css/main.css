@@ -1,0 +1,33 @@
+html {
+	background: url("../res/pic.jpg" ) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+ }
+.center{
+  bottom: 0;
+  height: 200px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+.center h1{ 
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 60px;
+	padding-top: 0px;
+	color: white;
+
+}
+.center h4{
+	color:white;
+	font-family: 'Fjalla One', sans-serif;
+}
+.center form{
+	padding-top: 30px;
+}
