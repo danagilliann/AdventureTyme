@@ -16,6 +16,7 @@ db.serialize(function() {
 	db.each("SELECT rowid AS id, info FROM user_info", function(err, row) { 
 		console.log(row.id + ": " + row.info);
 	});
+
 });
 
 db.close();
