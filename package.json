@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "plan a trip with friends",
   "main": "app.js",
-  "repository": { 
-		"type": "git",
-		"url": "git@github.com:danagilliann/AdventureTyme.git"
-	},
-	"scripts": {
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:danagilliann/AdventureTyme.git"
+  },
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.4.6",
     "express": "^4.13.3",
     "sqlite3": "^3.1.0"
   }
