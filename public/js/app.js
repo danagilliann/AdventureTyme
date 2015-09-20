@@ -1,11 +1,12 @@
-var main = function(){
+$(document).ready(function() {
+	$('.nav-tabs a').on('click', function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+   });
 
- $('.nav-tabs a').on('click', function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-    });
-    
-
-};
-
-$(document).ready(main);
+	$('#submitButton').click(function() {
+    var username = $("#username").val(),
+		    password = $("#password").val();
+		$.post( "/create", { username: username, password: password } );
+  });
+});

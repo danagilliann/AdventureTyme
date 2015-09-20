@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Adventure Time</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
      <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
      <link rel="stylesheet" href="css/create.css">
 	</head>
@@ -15,27 +15,23 @@
 		<div class = "row">
 			<div class = "col-md-offset-4 col-md-4">
 
-			<div ng-app ng-init="email=2;pass=word">
+			<div>
 
 				<form>
 					  <div class="form-group" >
 					    <label for="exampleInputEmail1">Username</label>
-					    <input type="number" class="form-control" id="exampleInputEmail1" ng-model="email">
+					    <input type="string" class="form-control" id="username">
 					  </div>
 					  <div class="form-group">
 					    <label for="exampleInputPassword1">Password</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" ng-model="pass">
+					    <input type="password" class="form-control" id="password">
 					  </div>
-					  <button type="submit" class="btn btn-default">Sign Up</button>
+					  <button type="submit" id="submitButton" class="btn btn-default">Sign Up</button>
 				</form>
-				{{email}}
 			</div>
 		</div>
 	  </div>
 	</div>
-	<script src="node_modules/angular/angular.js"></script>
-
-
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 </html>
