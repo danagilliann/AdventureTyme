@@ -1,33 +1,17 @@
-var express = require('express');
-var app = express();
+var express = require('express'),
+		app = express(),
+		path = require('path'), 
+		sqlite3 = require('sqlite3').verbose(),
+		db = new sqlite3.Database('user.db');
 
-// var sqlite3 = require('sqlite3').verbose();
-// var db = new sqlite3.Database('app.db');
-// var check;
-// 
-// db.serialize(function() { 
-// 	db.run("CREATE TABLE if not exists user_info (info TEXT)");
-// 	var stmt = db.prepare("INSERT INTO user_info VALUES (?)");
-// 	for (var i = 0; i < 10; i++) {
-// 		stmt.run("Ipsum " + i);
-// 	}
-// 	stmt.finalize();
-// 
-// 	db.each("SELECT rowid AS id, info FROM user_info", function(err, row) { 
-// 		console.log(row.id + ": " + row.info);
-// 	});
-// 
-// });
-// 
-// db.close();
-
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res) {
-	res.sendFile('/index.html');
-	res.sendFile('/css');
-	res.sendFile('/res');
-	res.sendFile('/js');
+	res.sendFile(path.join(__dirname + '/views/index.html'));
+});
+
+app.get('/create', function(req, res) { 
+	res.sendFile(path.join(__dirname + '/views/create.html'));
 });
 
 var server = app.listen(3000, function () {
