@@ -27,6 +27,7 @@ app.get('/', function (req, res) {
 	res.sendFile('/index.html');
 	res.sendFile('/css');
 	res.sendFile('/res');
+	res.sendFile('/js');
 });
 
 var server = app.listen(3000, function () {
