@@ -50,4 +50,9 @@ html {
 	background-color: rgba(0,0,0, 0.4);
 	border-radius: 20px;
 }
+.text form{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #CAFBF3;
+  text-align: center;
+}
 
