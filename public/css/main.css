@@ -6,6 +6,11 @@ html {
   background-size: cover;
   height: 100%;
  }
+ 
+ a { color: white; }
+
+ a:hover { color: white; }
+
  .top{
  	bottom: 0;
   height: 100%;
